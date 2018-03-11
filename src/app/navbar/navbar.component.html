@@ -1,0 +1,10 @@
+<div #mySidenav class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+  <a routerLink="about" (click)="closeNav()">About</a>
+  <a routerLink="service" (click)="closeNav()">Services</a>
+  <a routerLink="client" (click)="closeNav()">Clients</a>
+  <a routerLink="contact" (click)="closeNav()">Contact</a>
+</div>
+<div style="background-color: black">
+  <span style="font-size:30px;cursor:pointer;color: white" (click)="openNav()">&#9776; Menu</span>
+</div>

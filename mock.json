@@ -1,0 +1,24 @@
+{
+  "contact": [
+    {
+      "id": 1,
+      "phone": "json-server",
+      "type": "typicode"
+    },
+    {
+      "phone": "json-server",
+      "type": "typicode",
+      "id": 2
+    },
+    {
+      "phone": "3476038443",
+      "type": "typicode",
+      "id": 3
+    },
+    {
+      "phone": "quattro",
+      "type": "typicode",
+      "id": 4
+    }
+  ]
+}
