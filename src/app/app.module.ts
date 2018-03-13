@@ -15,6 +15,7 @@ import { ContactdettailComponent } from './contactdettail/contactdettail.compone
 import {ContactdettailresolverService} from "./componentresolver/contactdettailresolver.service";
 import { SpinnerComponent } from './spinner/spinner.component';
 import {SpinnerinterceptorService} from "./interceptor/spinnerinterceptor.service";
+import { LoginComponent } from './login/login.component';
 
 const interceptor = new SpinnerinterceptorService();
 
@@ -73,6 +74,7 @@ const appRoutes: Routes = [
     ContactComponent,
     ContactdettailComponent,
     SpinnerComponent,
+    LoginComponent,
   ],
   imports: [
     HttpClientModule,
