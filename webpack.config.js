@@ -403,11 +403,11 @@ module.exports = {
       "sourceMap": true,
       "filename": "scripts.bundle.js",
       "scripts": [
-        "/Users/roberto/angular/angular5/node_modules/jquery/dist/jquery.min.js",
-        "/Users/roberto/angular/angular5/node_modules/tether/dist/js/tether.min.js",
-        "/Users/roberto/angular/angular5/node_modules/bootstrap/dist/js/bootstrap.min.js"
+        path.join(process.cwd(),"node_modules/jquery/dist/jquery.min.js"),
+        path.join(process.cwd(),"node_modules/tether/dist/js/tether.min.js"),
+        path.join(process.cwd(),"node_modules/bootstrap/dist/js/bootstrap.min.js"),
       ],
-      "basePath": "/Users/roberto/angular/angular5"
+      "basePath": process.cwd()
     }),
     new CopyWebpackPlugin([
       {

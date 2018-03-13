@@ -7,32 +7,8 @@ run
 ```
 npm install
 ```
-delete 
-```
-webpack.config.js
-```
-open package.json and remove key:value on script section:
-```
-"scripts": {
-    "build": "webpack",
-    "start": "webpack-dev-server --port=4200",
-    "test": "karma start ./karma.conf.js",
-    "pree2e": "webdriver-manager update --standalone false --gecko false --quiet",
-    "e2e": "protractor ./protractor.conf.js"
-  }
-```
-you must get this:
-```
-"scripts": {
 
-  }
-```
-run
-```
-ng eject
-```
-
-#### note
+### note
 if you want to use a proxy you need to add this block of code 
 ```
 proxy: {
