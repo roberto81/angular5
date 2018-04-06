@@ -20,5 +20,11 @@
       "type": "typicode",
       "id": 4
     }
+  ],
+  "user":[
+    {
+      "email":"robertopallotta@tiscalinet.it",
+      "password":"roberto"
+    }
   ]
 }

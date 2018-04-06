@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
-
+import { FormsModule } from "@angular/forms";
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule, Routes } from "@angular/router";
@@ -16,6 +16,8 @@ import {ContactdettailresolverService} from "./componentresolver/contactdettailr
 import { SpinnerComponent } from './spinner/spinner.component';
 import {SpinnerinterceptorService} from "./interceptor/spinnerinterceptor.service";
 import { LoginComponent } from './login/login.component';
+import {LoginguardService} from "./guards/loginguard.service";
+import {AuthService} from "./modelservice/auth.service";
 
 const interceptor = new SpinnerinterceptorService();
 
@@ -28,6 +30,11 @@ const appRoutes: Routes = [
     component: HeroListComponent,
     data: { title: 'Heroes List' }
   },*/
+
+  { path: 'login',
+    component: LoginComponent
+  },
+
   { path: 'about',
     component: AboutComponent
   },
@@ -46,12 +53,8 @@ const appRoutes: Routes = [
     component: ContactComponent
   },
 
-  { path: '',
+  { path: '', canActivate:[LoginguardService],
     component: HomeComponent
-  },
-
-  { path: 'spinner',
-    component: SpinnerComponent
   },
 
   { path: 'contactdettail/:id',
@@ -79,12 +82,15 @@ const appRoutes: Routes = [
   imports: [
     HttpClientModule,
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: false, useHash: true } // <-- debugging purposes only
     )
   ],
   providers: [
+    AuthService,
+    LoginguardService,
     ContactService,
     ContactdettailresolverService,
     {provide: SpinnerinterceptorService, useValue: interceptor},
